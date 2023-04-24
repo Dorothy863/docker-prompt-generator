@@ -12,7 +12,7 @@ RUN echo "from clip_interrogator import Config, Interrogator" > /get-models.py &
     echo "config.chunk_size = 2048" >> /get-models.py && \
     echo "config.flavor_intermediate_count = 512" >> /get-models.py && \
     echo "config.blip_num_beams = 64" >> /get-models.py && \
-    echo "config.clip_model_name = "ViT-H-14/laion2b_s32b_b79k"" >> /get-models.py && \
+    echo "config.clip_model_name = 'ViT-H-14/laion2b_s32b_b79k'" >> /get-models.py && \
     echo "ci = Interrogator(config)" >> /get-models.py
 
 RUN python /get-models.py && \
