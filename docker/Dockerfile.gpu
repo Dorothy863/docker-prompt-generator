@@ -7,7 +7,7 @@ RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && 
 RUN echo "from clip_interrogator import Config, Interrogator" > /get-models.py && \
     echo "import torch" >> /get-models.py && \
     echo "config = Config()" >> /get-models.py && \
-    echo "config.device = 'cuda' if torch.cuda.is_available() else 'cpu'" >> /get-models.py
+    echo "config.device = 'cuda' if torch.cuda.is_available() else 'cpu'" >> /get-models.py && \
     echo "config.blip_offload = False if torch.cuda.is_available() else True" >> /get-models.py && \
     echo "config.chunk_size = 2048" >> /get-models.py && \
     echo "config.flavor_intermediate_count = 512" >> /get-models.py && \
