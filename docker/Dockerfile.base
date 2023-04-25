@@ -3,7 +3,7 @@ LABEL org.opencontainers.image.authors="soulteary@gmail.com"
 
 RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && \
     pip install transformers sentencepiece sacremoses && \
-    pip install gradio==3.26.0
+    pip install gradio
 
 WORKDIR /app
 
